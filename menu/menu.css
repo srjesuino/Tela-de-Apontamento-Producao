@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+/* Sidebar oculta inicialmente */
+#sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 35%;
+    max-width: 200px;
+    background-color: #58af9c;
+    border-right: solid 1px rgb(163, 158, 158);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    position: fixed;
+    left: -150px;   
+    
+    transition: left 0.5s ease;
+}
+#sidebar:hover {
+    transition-delay: 30ms;
+    left: 0;
+}
+#sidebar #options,
+#sidebar #login {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#sidebar:hover #options,
+#sidebar:hover #login {
+    opacity: 1;
+}
+#conteudo {
+    margin: 0;
+    width: 100%;
+    transition: margin-left 0.5s ease;
+}
+#sidebar:hover + #conteudo {
+    transition-delay: 50ms;
+    margin-left: 200px; /* Expande o espaço quando a sidebar é visível */
+}
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+}
+#options div{
+    margin-top: 3px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 22px;
+    font-family: Nunito, sans-serif;
+}
+#logo{
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 1px;
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+#options div:hover{
+    background-color: rgb(139, 207, 235);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+#options {
+    border-top: 1px solid rgb(163, 158, 158);
+    border-bottom: 1px solid rgb(163, 158, 158);
+    height: 100%;
+    background-color: #58af86;
+}
+@font-face{
+    font-family: Nunito;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+#data-login{
+    color: aliceblue;
+    font-size: 15px;
+    align-self: center;
+    font-family: Nunito;
+    margin-top: 12px;
+}
+#logout{
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+#logout img{
+    width: 22px;
+    margin: 0;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    background-color: #58af86;
+    border-bottom-right-radius: 8px;
+}
+#logout img:hover{
+    width: 23px;
+    cursor: pointer;
+}
+#mao{
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: rotate(180deg);
+    transition: opacity 0.3s ease;
+}
+@media (max-width: 720px){
+    #sidebar{
+        height:100%;
+    }
+}
