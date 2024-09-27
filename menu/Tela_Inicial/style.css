@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background-color: #FEFEFE;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #58AF9C;
+    color: white;
+    font-family: Nunito, sans-serif;
+    font-size: 23px;
+    height: 70px;
+    width: 30%;
+    position: absolute;
+    top: 38%;
+    right: 35%;
+}
+p {
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+#logo {
+    display: flex;
+    width: 50% ;
+    height:60% ;
+    background-image: url("logo_madepar_semfundo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:200% ;
+    opacity: 0.2;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+    
+#text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+#julio {
+    width: 250px;
+    height: 370px;
+    object-fit: cover;
+}
+
+#msg {
+    width: 50%;
+    height: 80% ;
+    
+    display:grid;
+}
+    
+@font-face{
+    font-family: Nunito;
+
+    src: url("Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+#teste{
+    display: flex;
+    border: solid;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
