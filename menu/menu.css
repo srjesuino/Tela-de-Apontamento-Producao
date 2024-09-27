@@ -4,7 +4,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-/* Sidebar oculta inicialmente */
+
 #sidebar {
     height: 100vh;
     display: flex;
@@ -36,8 +36,12 @@ body {
 #sidebar:hover #login {
     opacity: 1;
 }
+#sidebar:hover .option{
+    
+}
 #conteudo {
     margin: 0;
+    margin-left: 50px;
     width: 100%;
     transition: margin-left 0.5s ease;
 }
@@ -52,13 +56,10 @@ iframe {
     margin: 0;
 }
 #options div{
-    margin-top: 3px;
-    height: 40px;
-    display: flex;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    font-size: 22px;
     font-family: Nunito, sans-serif;
 }
 #logo{
@@ -71,7 +72,7 @@ a{
     text-decoration: none;
     color: azure;
 }
-#options div:hover{
+.option:hover, .subOption:hover{
     background-color: rgb(139, 207, 235);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
@@ -80,6 +81,9 @@ a{
     border-bottom: 1px solid rgb(163, 158, 158);
     height: 100%;
     background-color: #58af86;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 @font-face{
     font-family: Nunito;
@@ -126,5 +130,77 @@ a{
 @media (max-width: 720px){
     #sidebar{
         height:100%;
+    }
+}
+.option, .subOption{
+    cursor: pointer;
+    color: azure;
+    height: auto;
+
+    padding: 10px;
+}
+.subOptions {
+    display: none;
+    flex-direction: column;
+}
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #397524 #58AF86;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #58AF86;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #397524;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #62A34B;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #62A34B;
+  }
+  
+#options{
+    padding: 20px;
+}
+
+@media(max-width: 570px){
+    #sidebar{
+        left: -100px;
+    }
+    #data-login{
+        font-size: 8px;
+    }
+    #options{
+        padding: 0;
+    }
+    .option{
+       padding: 5px;
+       margin: 2px;
+    }
+    #sidebar:hover + #conteudo {
+        transition-delay: 50ms;
+        margin-left: 35%
     }
 }

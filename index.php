@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div id="welcome">
             <img src="login/LOGO MADEPAR NOVA.png">
             <div id="welcome-container">
-                <h5>Tela de Apontamentos Fabrica Madepar</h5>
+                <h5>SERVIÇOS MADEPAR</h5>
             </div>
             <div>
                 <label style="color: #555;">&copy;Madepar Indústria e Comércio de Madeiras LTDA. 2024.</label>

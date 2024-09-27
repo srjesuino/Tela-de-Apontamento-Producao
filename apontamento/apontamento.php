@@ -69,6 +69,7 @@ if (isset($_POST['Logout'])) {
                         <div id="nomeRecurso"></div>
                     </div>
                 </div>
+                <button class="btn btn-primary" type="button" style="background-color:#3FB09D">Apontar</button>
             </div>
             <video id="qr-reader"></video>
         </div>
