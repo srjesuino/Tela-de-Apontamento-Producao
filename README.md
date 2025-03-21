@@ -8,7 +8,8 @@ A solução permite que operadores registrem suas atividades de forma ágil e ef
 garantindo maior controle e rastreabilidade da produção. No caso específico da Madepar, o sistema foi implementado em ambos os cenários, utilizando tablets Multilaser M10 como dispositivos móveis.
 
 ## 🚀 Funcionalidades
-- Leitura de QR Codes para capturar ordem de produção ![Tela de Apontamento Sem Leitura](ScreenShots/Tela_Default.png).
+- Autenticação: Login de usuários com sessão PHP com verificação via Protheus.
+- Leitura de QR Codes para capturar ordem de produção ![Tela de Apontamento Sem Leitura](ScreenShots/Tela_Default.png)
 - Identificação de operadores via usuários do Protheus.
 - Responsividade e compatibilidade, garantindo o uso tanto nos totens da fábrica quanto nos tablets Multilaser M10, que possuem especificações técnicas mais modestas.
 - Relatório de últimos apontamentos, exibindo uma lista com as informações dos registros recentes ![Lista de Apontamentos](ScreenShots/Listar_Apontamentos.png)
@@ -16,6 +17,15 @@ garantindo maior controle e rastreabilidade da produção. No caso específico d
 - Captura de informações referentes à OP lida com consultas SQL no banco de dados do Protheus ![Tela com os dados capturados pela OP](ScreenShots/QrCode_Lido.png)
 - Apontamento do lote de produção conforme o recurso que o operador comanda.
 - Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](ScreenShots/DropDown_Ativo.png)
+
+
+
+- **Consulta de Dados**: Pesquisa informações de produção a partir de códigos de barras.
+- **Leitura de QR Code**: Escaneamento via câmera em dispositivos móveis.
+- **Registro de Apontamentos**: Envio de dados para um serviço SOAP.
+- **Listagem de Apontamentos**: Exibição de histórico em tabela responsiva.
+- **Dropdown Personalizado**: Seleção de recursos com filtro dinâmico.
+- **Responsividade**: Interface adaptável a desktops e dispositivos móveis.
 
 ## 🛠️ Tecnologias Utilizadas
 - **Frontend:** HTML, CSS (Bootstrap), JavaScript, Figma
