@@ -18,8 +18,8 @@ garantindo maior controle e rastreabilidade da produção. No caso específico d
 - Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](ScreenShots/DropDown_Ativo.png)
 
 ## 🛠️ Tecnologias Utilizadas
-- **Frontend:** HTML, CSS, JavaScript, Figma
-- **Backend:** PHP
+- **Frontend:** HTML, CSS (Bootstrap), JavaScript, Figma
+- **Backend:** PHP, WebService usando SOAP
 - **Banco de Dados:** MySQL, MSSQL
 - **Outras Ferramentas:** XAMPP, Instascan
 
