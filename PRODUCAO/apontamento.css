@@ -1,535 +1,573 @@
+/* Define o estilo do dropdown customizado */
 #customDropdown {
-    position: relative;
-    width: 100%;
+    position: relative; /* Posiciona o dropdown em relação ao seu contêiner pai */
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
+/* Estiliza o contêiner de login com Flexbox para centralizar conteúdo */
 #login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Usa Flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Estiliza o campo de entrada para filtros */
 #filterInput {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Ocupa toda a largura */
+    padding: 12px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
+/* Estiliza as opções do dropdown */
 .dropdown-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 150px;
-    /* Ajuste a altura máxima conforme necessário */
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    overflow-y: auto;
-    /* Adiciona a rolagem vertical */
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posicionado absolutamente em relação ao #customDropdown */
+    top: 100%; /* Aparece logo abaixo do campo de entrada */
+    left: 0; /* Alinhado à esquerda do contêiner */
+    width: 100%; /* Mesma largura do contêiner pai */
+    max-height: 150px; /* Altura máxima com rolagem */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    z-index: 1; /* Fica acima de outros elementos */
+    overflow-y: auto; /* Rolagem vertical se exceder a altura máxima */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
 }
 
+/* Estiliza cada opção dentro do dropdown */
 .option {
-    padding: 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
+    padding: 12px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor para indicar clicabilidade */
+    border-bottom: 1px solid #ddd; /* Linha divisória entre opções */
 }
 
+/* Efeito ao passar o mouse sobre uma opção */
 .option:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Fundo cinza claro ao hover */
 }
 
+/* Oculta o elemento de valor selecionado (provavelmente manipulado por JS) */
 #selectedValue {
-    display: none;
+    display: none; /* Inicialmente oculto */
 }
 
+/* Estiliza o corpo da página */
 body {
-    height: calc(var(--vh, 1vh) *100);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+    height: calc(var(--vh, 1vh) * 100); /* Altura total da tela, ajustada por variável */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 0; /* Remove margens padrão */
 }
 
+/* Estiliza o contêiner principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 90%;
-    max-width: 1200px;
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 40px;/* Espaçamento interno */
+    width: 90%; /* Largura relativa */
+    max-width: 1200px; /* Largura máxima fixa */
 }
 
+/* Estiliza o cabeçalho */
 .header {
-    width: 100%;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-    margin-bottom: 10px;
+    width: 100%; /* Ocupa toda a largura */
+    padding-bottom: 10px; /* Espaçamento inferior */
+    border-bottom: 1px solid #ccc; /* Linha divisória inferior */
+    text-align: center; /* Texto centralizado */
+    margin-bottom: 10px; /* Espaço abaixo */
 }
 
+/* Estiliza o título no cabeçalho */
 .header h3 {
-    margin: 0;
-    color: #333;
-    font-size: 1.8em;
+    margin: 0; /* Remove margens padrão */
+    color: #333; /* Cor cinza escura */
+    font-size: 1.8em; /* Tamanho da fonte */
 }
 
+/* Estiliza o painel principal */
 .panel {
-    width: 100%;
-    padding: 80px;
-    padding-top: 0;
+    width: 100%; /* Ocupa toda a largura */
+    padding: 80px; /* Espaçamento interno generoso */
+    padding-top: 0; /* Remove padding superior */
 }
 
+/* Estiliza o cabeçalho do painel */
 .header-panel {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Itens empilhados verticalmente */
 }
 
+/* Estiliza o campo de entrada no cabeçalho do painel */
 .header-panel input {
-    font-size: 1.2em;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-}
-#apontar{
-    margin-left: 9px;
-}
-.row-panel {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    font-size: 1.2em; /* Tamanho da fonte */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo */
+    text-align: center; /* Texto centralizado */
 }
 
+/* Ajusta a margem de um elemento específico */
+#apontar {
+    margin-left: 9px; /* Margem à esquerda */
+}
+
+/* Estiliza uma linha no painel */
+.row-panel {
+    margin-top: 20px; /* Espaço acima */
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+}
+
+/* Estiliza as linhas específicas do painel */
 #line1,
 #line2,
 #line3 {
-    width: 100%;
-    margin-bottom: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%; /* Ocupa toda a largura */
+    margin-bottom: 2px; /* Espaço inferior */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    align-items: flex-start; /* Alinhamento à esquerda */
 }
 
+/* Estiliza títulos principais */
 h1 {
-    margin-bottom: 5px;
-    margin-top: 0;
-    color: #333;
+    margin-bottom: 5px; /* Espaço inferior */
+    margin-top: 0; /* Remove margem superior */
+    color: #333; /* Cor cinza escura */
 }
-.dados{
-    font-size:larger;
-    color: black;
+
+/* Estiliza texto de dados */
+.dados {
+    font-size: larger; /* Tamanho de fonte maior */
+    color: black; /* Cor preta */
 }
+
+/* Estiliza rótulos */
 label {
-    font-size: x-large;
-    color: #555;
-    margin-right: 20px;
+    font-size: x-large; /* Tamanho de fonte grande */
+    color: #555; /* Cor cinza média */
+    margin-right: 20px; /* Espaço à direita */
 }
 
+/* Estiliza o contêiner do dropdown */
 #dropdownContainer {
-    margin-left: auto;
-    position: relative;
-    width: 100%;
+    margin-left: auto; /* Alinha à direita */
+    position: relative; /* Posicionamento relativo para o dropdown */
+    width: 100%; /* Ocupa toda a largura */
 }
 
+/* Estiliza o campo de entrada no contêiner do dropdown */
 #dropdownContainer input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 10px; /* Espaço acima */
 }
 
+/* Estiliza o dropdown em si */
 #dropdown {
-    display: none;
-    top: 45px;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    max-height: 150px;
-    overflow-y: auto;
-    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+    top: 45px; /* Posicionado 45px abaixo do campo */
+    width: 100%; /* Ocupa toda a largura */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    z-index: 1; /* Fica acima de outros elementos */
+    max-height: 150px; /* Altura máxima com rolagem */
+    overflow-y: auto; /* Rolagem vertical */
+    border-radius: 5px; /* Bordas arredondadas */
 }
+
+/* Estiliza as opções do dropdown */
 #dropdown option {
-    padding: 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
+    padding: 12px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    border-bottom: 1px solid #ddd; /* Linha divisória */
 }
 
+/* Efeito hover nas opções do dropdown */
 #dropdown option:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
 }
+
+/* Estiliza o campo de nome do recurso */
 #nomeRecurso {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 10px; /* Espaço inferior */
+    margin-top: 10px; /* Espaço superior */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    background-color: #f9f9f9; /* Fundo cinza claro */
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo */
 }
 
+/* Oculta o elemento de cópia (provavelmente manipulado por JS) */
 #copy {
-    display: none;
-}    
-#fecharCam{
-        left: auto;
-        top: 5;
-        margin-left: auto;
-        margin-right: auto;
-        position: fixed;
-    }
+    display: none; /* Inicialmente oculto */
+}
 
-@media (max-height: 700px){
-    #line3{
-        flex-direction: row;
+/* Estiliza o botão de fechar a câmera */
+#fecharCam {
+    left: auto; /* Remove posicionamento fixo à esquerda */
+    top: 5; /* Posição fixa a 5px do topo (provavelmente falta unidade, como 'px') */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    position: fixed; /* Fixo na tela */
+}
+
+/* Ajustes para telas com altura máxima de 700px */
+@media (max-height: 700px) {
+    #line3 {
+        flex-direction: row; /* Alinha itens horizontalmente */
     }
-    #fecharCam{
-        left: 5;
-        margin: 0;
-        top: auto;
+    #fecharCam {
+        left: 5; /* Posição fixa a 5px da esquerda (provavelmente falta unidade) */
+        margin: 0; /* Remove margens */
+        top: auto; /* Remove posicionamento fixo no topo */
     }
 }
 
+/* Ajustes para telas com largura mínima de 900px */
 @media (min-width: 900px) {
-    #qntderesttxt, #rest{
-    margin-left: auto;
-}
+    #qntderesttxt, #rest {
+        margin-left: auto; /* Alinha à direita */
+    }
     #line1,
     #line2,
     #line3 {
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 15px;
+        flex-direction: row; /* Alinha itens horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        margin-bottom: 15px; /* Espaço inferior */
     }
-
     h1 {
-        margin-bottom: 0;
-        margin-right: 10px;
+        margin-bottom: 0; /* Remove margem inferior */
+        margin-right: 10px; /* Espaço à direita */
     }
-
     label {
-        margin-left: 10px;
-        margin-bottom: 0;
-        /* Remove margem inferior no label */
+        margin-left: 10px; /* Espaço à esquerda */
+        margin-bottom: 0; /* Remove margem inferior */
     }
-
     #dropdownContainer {
-        width: 40%;
+        width: 40%; /* Reduz a largura para 40% */
     }
-
     #copy {
-        font-size: 16px;
-        display: block;
+        font-size: 16px; /* Tamanho da fonte */
+        display: block; /* Torna visível */
     }
 }
 
+/* Oculta o leitor de QR (provavelmente manipulado por JS) */
 #qr-reader {
-    display: none;
-    transform: scaleX(1);
+    display: none; /* Inicialmente oculto */
+    transform: scaleX(1); /* Escala normal (sem transformação) */
 }
 
+/* Estiliza o elemento de vídeo */
 video {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80px; /* Largura fixa */
+    height: 80px; /* Altura fixa */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
 }
 
+/* Posiciona o elemento de dados de login */
 #data-login {
-    position: absolute;
+    position: absolute; /* Posicionamento absoluto */
 }
 
+/* Alinha o botão de logout à direita */
 #logout {
-    margin-left: auto;
+    margin-left: auto; /* Alinha à direita */
 }
 
-
-
+/* Define a animação de pulso vermelho (feedback de erro) */
 @keyframes pulse-red {
     0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+        transform: scale(0.95); /* Reduz ligeiramente o tamanho */
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7); /* Sombra inicial vermelha */
     }
-
     70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+        transform: scale(1); /* Tamanho normal */
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0); /* Sombra se expande e desaparece */
     }
-
     80% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+        transform: scale(0.95); /* Reduz novamente */
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0); /* Sombra desaparece */
     }
-
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Volta ao tamanho normal */
     }
 }
+
+/* Define a animação de pulso verde (feedback de sucesso) */
 @keyframes pulse-green {
     0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 #d4edda;
+        transform: scale(0.95); /* Reduz ligeiramente o tamanho */
+        box-shadow: 0 0 0 0 #d4edda; /* Sombra inicial verde clara */
     }
-
     70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+        transform: scale(1); /* Tamanho normal */
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0); /* Sombra se expande (nota: cor inconsistente com verde) */
     }
-
     80% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+        transform: scale(0.95); /* Reduz novamente */
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0); /* Sombra desaparece (nota: cor inconsistente com verde) */
     }
-
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Volta ao tamanho normal */
     }
 }
 
+/* Estiliza o contêiner de erro */
 #erro {
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    width: 100%; /* Ocupa toda a largura */
+    align-items: center; /* Centraliza horizontalmente */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
 }
 
+/* Estiliza a div de erro */
 #erro-div {
-    animation: pulse-red 1s 2;
-    display: none;
-    position: absolute;
-    margin-left: auto;
+    animation: pulse-red 1s 2; /* Aplica animação de pulso vermelho, 2 vezes em 1 segundo */
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posicionamento absoluto */
+    margin-left: auto; /* Alinha à direita */
 }
-#sucess-div{
-    animation: pulse-green 1s 2;
-    display: none;
-    position: absolute;
-    margin-left: auto;
-}
-#camera-overlay{
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-}
-#container-lista{
-    align-items: center;
-    justify-content: center;
-}
-#lista-apontamentos{
-    -webkit-overflow-scrolling: touch;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-#tabela{
-    overflow: auto;
-    justify-items: center;
-}
-#pesquisa{
-    align-self: center;
-    margin-bottom: 20px;
-}
-#lista-apontamentos table{
-    border-collapse: collapse; 
-}
-#lista-apontamentos thead{
-    position: sticky;
-    top: 0;
-}
-#lista-apontamentos th, #lista-apontamentos td{
-    padding: 10px; /* Espaçamento dentro das células */
-    text-align: left; /* Alinhamento do texto */
-    border: 1px solid #ddd; /* Borda para as células */
-}
-#lista-apontamentos th{
-    background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
-    font-weight: bold; /* Deixar o texto mais grosso */
-}
-#lista-apontamentos tr:nth-child(even) {
-    background-color: #f9f9f9; /* Cor para as linhas pares */
-  }
-#lista-apontamentos tr:hover {
-    background-color: #e0e0e0; /* Cor para a linha quando o mouse passa por cima */
-  }
-#lista-apontamentos table, th, td {
-    border: 1px solid #ccc; /* Cor das bordas */
 
+/* Estiliza a div de sucesso */
+#sucess-div {
+    animation: pulse-green 1s 2; /* Aplica animação de pulso verde, 2 vezes em 1 segundo */
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posicionamento absoluto */
+    margin-left: auto; /* Alinha à direita */
 }
+
+/* Estiliza o overlay da câmera */
+#camera-overlay {
+    height: 100%; /* Altura total */
+    align-items: center; /* Centraliza horizontalmente */
+    flex-direction: column; /* Itens empilhados verticalmente */
+}
+
+/* Estiliza o contêiner da lista */
+#container-lista {
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estiliza a lista de apontamentos */
+#lista-apontamentos {
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos Webkit */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f1f1f1; /* Fundo cinza claro */
+    width: 80%; /* Largura relativa */
+    height: 100%; /* Altura total */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    padding: 10px; /* Espaçamento interno (sobrescreve o anterior) */
+}
+
+/* Estiliza a tabela */
+#tabela {
+    overflow: auto; /* Rolagem se o conteúdo exceder */
+    justify-items: center; /* Centraliza itens (não aplicável diretamente em tabelas) */
+}
+
+/* Estiliza o campo de pesquisa */
+#pesquisa {
+    align-self: center; /* Centraliza no eixo transversal */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estiliza a tabela dentro da lista de apontamentos */
+#lista-apontamentos table {
+    border-collapse: collapse; /* Remove espaçamento entre bordas das células */
+}
+
+/* Fixa o cabeçalho da tabela ao rolar */
+#lista-apontamentos thead {
+    position: sticky; /* Fixo no topo */
+    top: 0; /* Alinhado ao topo */
+}
+
+/* Estiliza células da tabela (cabeçalho e dados) */
+#lista-apontamentos th, #lista-apontamentos td {
+    padding: 10px; /* Espaçamento interno */
+    text-align: left; /* Texto alinhado à esquerda */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+/* Estiliza o cabeçalho da tabela */
+#lista-apontamentos th {
+    background-color: #f2f2f2; /* Fundo cinza claro */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Aplica fundo diferente para linhas pares */
+#lista-apontamentos tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fundo cinza claro para linhas pares */
+}
+
+/* Efeito hover nas linhas da tabela */
+#lista-apontamentos tr:hover {
+    background-color: #e0e0e0; /* Fundo cinza médio ao passar o mouse */
+}
+
+/* Define bordas para a tabela e suas células */
+#lista-apontamentos table, th, td {
+    border: 1px solid #ccc; /* Borda cinza clara */
+}
+
+/* Estiliza a barra de rolagem em navegadores Webkit */
 *::-webkit-scrollbar {
-    height: 10px;
-    width: 10px
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #58AF86;
-  }
-  
-  *::-webkit-scrollbar-track:hover {
-    background-color: #B8C0C2;
-  }
-  
-  *::-webkit-scrollbar-track:active {
-    background-color: #B8C0C2;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #397524;
-  }
-  
-  *::-webkit-scrollbar-thumb:hover {
-    background-color: #62A34B;
-  }
-  
-  *::-webkit-scrollbar-thumb:active {
-    background-color: #62A34B;
-  }
-  @media(max-width: 1200px) {
-    #pesquisa{
-        font-size: 12px;
+    height: 10px; /* Altura da barra horizontal */
+    width: 10px; /* Largura da barra vertical */
+}
+
+/* Estiliza a pista da barra de rolagem */
+*::-webkit-scrollbar-track {
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #58AF86; /* Cor verde */
+}
+
+/* Efeito hover na pista da barra de rolagem */
+*::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2; /* Cor cinza clara ao passar o mouse */
+}
+
+/* Efeito ativo na pista da barra de rolagem */
+*::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2; /* Cor cinza clara ao clicar */
+}
+
+/* Estiliza o polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #397524; /* Cor verde escura */
+}
+
+/* Efeito hover no polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #62A34B; /* Cor verde média ao passar o mouse */
+}
+
+/* Efeito ativo no polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb:active {
+    background-color: #62A34B; /* Cor verde média ao clicar */
+}
+
+/* Ajustes para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+    #pesquisa {
+        font-size: 12px; /* Reduz o tamanho da fonte */
     }
-    #pesquisa button{
-        font-size: 12px;
+    #pesquisa button {
+        font-size: 12px; /* Reduz o tamanho da fonte dos botões */
     }
-    #lista-apontamentos{
-        width: 95%;
+    #lista-apontamentos {
+        width: 95%; /* Aumenta a largura relativa */
     }
-     /* Torna a tabela uma estrutura de bloco para telas pequenas */
-     #lista-apontamento table {
-        display: block;
-        width: 100%;
-        overflow: auto; /* Esconde qualquer conteúdo que ultrapasse o limite */
-      }
-    
-      /* Ajusta cada linha como um bloco */
-      #lista-apontamentos tr {
-        display: block;
-        margin-bottom: 10px; /* Espaçamento entre as linhas */
-      }
-    
-      /* As células ficam em um formato de bloco */
-      #lista-apontamentos th, #lista-apontamentos td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px;
-        font-size: 14px;
-        border: none; /* Remove as bordas para um layout mais limpo */
-        background-color: #fff; /* Garante que o fundo seja branco */
-      }
-    
-      /* Título das colunas no cabeçalho fica à esquerda */
-      #lista-apontamentos th {
-        display: none; /* Esconde o cabeçalho original */
-      }
-    
-      /* Exibe o cabeçalho dentro das células */
-      #lista-apontamentos td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        margin-right: 10px; /* Espaçamento entre o título e o valor */
-      }
-    
-      /* Ajusta o fundo das células */
-      #lista-apontamentos tr:nth-child(even) td::before {
-        background-color: #f9f9f9;
-      }
-    
-      #lista-apontamentos tr:hover td::before {
-        background-color: #e0e0e0;
-      }
-    #botoes button{
-        font-size: small;
+    /* Transforma a tabela em blocos para telas menores */
+    #lista-apontamento table { /* Nota: parece haver um erro de digitação, deveria ser #lista-apontamentos */
+        display: block; /* Transforma em bloco */
+        width: 100%; /* Ocupa toda a largura */
+        overflow: auto; /* Adiciona rolagem se necessário */
     }
-    #qntderesttxt, #rest{
-        margin-left: 0;
+    /* Ajusta as linhas da tabela como blocos */
+    #lista-apontamentos tr {
+        display: block; /* Transforma em bloco */
+        margin-bottom: 10px; /* Espaço entre linhas */
     }
-    #line2 label, #line1 label{
-        margin-bottom: 2px;
+    /* Ajusta as células como blocos com rótulos */
+    #lista-apontamentos th, #lista-apontamentos td {
+        display: flex; /* Usa Flexbox */
+        justify-content: space-between; /* Espaça rótulo e valor */
+        padding: 8px; /* Espaçamento interno */
+        font-size: 14px; /* Tamanho da fonte */
+        border: none; /* Remove bordas */
+        background-color: #fff; /* Fundo branco */
+    }
+    /* Oculta o cabeçalho original */
+    #lista-apontamentos th {
+        display: none; /* Oculta o cabeçalho */
+    }
+    /* Adiciona rótulos antes dos dados nas células */
+    #lista-apontamentos td::before {
+        content: attr(data-label); /* Usa o atributo data-label como rótulo */
+        font-weight: bold; /* Texto em negrito */
+        margin-right: 10px; /* Espaço à direita */
+    }
+    /* Ajusta o fundo das linhas pares */
+    #lista-apontamentos tr:nth-child(even) td::before {
+        background-color: #f9f9f9; /* Fundo cinza claro */
+    }
+    /* Efeito hover nas linhas */
+    #lista-apontamentos tr:hover td::before {
+        background-color: #e0e0e0; /* Fundo cinza médio ao passar o mouse */
+    }
+    #botoes button {
+        font-size: small; /* Reduz o tamanho da fonte dos botões */
+    }
+    #qntderesttxt, #rest {
+        margin-left: 0; /* Remove margem à esquerda */
+    }
+    #line2 label, #line1 label {
+        margin-bottom: 2px; /* Espaço inferior */
     }
     .panel {
-        padding: 0;
+        padding: 0; /* Remove padding */
     }
-
     label {
-        font-size: 15px;
+        font-size: 15px; /* Reduz o tamanho da fonte */
     }
-
     .container {
-        margin-top: auto;
+        margin-top: auto; /* Alinha ao topo */
     }
-
-    #login {
-        flex-direction: column;
-        margin-bottom: 0.5px;
-    }
-
-    #data-login {
-        position: relative;
-        font-size: 12px;
-    }
-
-    #logout {
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 10px;
-    }
-
     .row-panel h1 {
-        font-size: 16px;
+        font-size: 16px; /* Tamanho da fonte reduzido */
     }
-
     #filterInput {
-        font-size: 10px;
-        height: 50%;
+        font-size: 10px; /* Tamanho da fonte reduzido */
+        height: 50%; /* Altura relativa */
     }
-
     #codigoBarra {
-        font-size: 14px;
+        font-size: 14px; /* Tamanho da fonte */
     }
-
     .header h2 {
-        font-size: 16px;
-        margin-bottom: 0.5px;
+        font-size: 16px; /* Tamanho da fonte reduzido */
+        margin-bottom: 0.5px; /* Espaço inferior pequeno */
     }
-
     .container {
-        margin-top: 0;
-        height: 100%;
-        padding-top: 20px;
+        margin-top: 0; /* Remove margem superior */
+        height: 100%; /* Altura total */
+        padding-top: 20px; /* Espaçamento superior */
     }
-
     #nomeRecurso {
-        font-size: 12px;
+        font-size: 12px; /* Tamanho da fonte reduzido */
     }
-    .dados{
-        font-size: 12px;
+    .dados {
+        font-size: 12px; /* Tamanho da fonte reduzido */
     }
-    #apontar{
-        margin-left: 0;
+    #apontar {
+        margin-left: 0; /* Remove margem à esquerda */
     }
-    #abrir-camera{
-        margin-left: 0;
+    #abrir-camera {
+        margin-left: 0; /* Remove margem à esquerda */
     }
 }
