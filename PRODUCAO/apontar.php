@@ -3,7 +3,7 @@
     function apontar($cbarras, $recurso, $usuario){
         try {
             // Cria uma conexão com o serviço SOAP usando o WSDL fornecido
-            $conn = new SoapClient("http://192.168.10.194:8180/ws0201/MADWS005.apw?WSDL");
+            $conn = new SoapClient("http://192.168.10.***:****/ws0201/MADWS005.apw?WSDL");
         } catch (Exception $e) {
             // Se houver erro na conexão, exibe a mensagem de erro e encerra o script
             die("Erro ao conectar ao serviço: " . $e->getMessage());
@@ -13,7 +13,7 @@
             // TOKEN: chave fixa para autenticação no serviço
             // DADOSAPONT: array com código de barras, recurso e usuário
             $stmt = $conn->GRVAPONT(array(
-                "TOKEN" => "_SROODRAPEDAM_", 
+                "TOKEN" => "_******_", 
                 "DADOSAPONT" => array(
                     "CBARRAS" => $cbarras, 
                     "RECURSO" => $recurso, 
