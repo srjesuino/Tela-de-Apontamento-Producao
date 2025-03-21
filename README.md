@@ -8,14 +8,14 @@ A solução permite que operadores registrem suas atividades de forma ágil e ef
 garantindo maior controle e rastreabilidade da produção. No caso específico da Madepar, o sistema foi implementado em ambos os cenários, utilizando tablets Multilaser M10 como dispositivos móveis.
 
 ## 🚀 Funcionalidades
-- Leitura de QR Codes para capturar ordem de produção ![Tela de Apontamento Sem Leitura](screenshots/Tela_Default.png).
+- Leitura de QR Codes para capturar ordem de produção ![Tela de Apontamento Sem Leitura](ScreenShots/Tela_Default.png).
 - Identificação de operadores via usuários do Protheus.
 - Responsividade e compatibilidade, garantindo o uso tanto nos totens da fábrica quanto nos tablets Multilaser M10, que possuem especificações técnicas mais modestas.
-- Relatório de últimos apontamentos, exibindo uma lista com as informações dos registros recentes ![Lista de Apontamentos](screenshots/Listar_Apontamentos.png)
+- Relatório de últimos apontamentos, exibindo uma lista com as informações dos registros recentes ![Lista de Apontamentos](ScreenShots/Listar_Apontamentos.png)
 - Integração com o sistema Protheus via WebService (captura de usuário e registro de apontamento diretamente no sistema).
-- Captura de informações referentes à OP lida com consultas SQL no banco de dados do Protheus ![Tela com os dados capturados pela OP](screenshots/QrCode_Lido.png)
+- Captura de informações referentes à OP lida com consultas SQL no banco de dados do Protheus ![Tela com os dados capturados pela OP](ScreenShots/QrCode_Lido.png)
 - Apontamento do lote de produção conforme o recurso que o operador comanda.
-- Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](ScreenShots/DropDown Ativo.png)
+- Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](ScreenShots/DropDown_Ativo.png)
 
 ## 🛠️ Tecnologias Utilizadas
 - **Frontend:** HTML, CSS, JavaScript, Figma
