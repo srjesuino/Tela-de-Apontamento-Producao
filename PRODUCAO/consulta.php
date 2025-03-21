@@ -3,10 +3,10 @@
 class DatabaseQuery
 {
     // Propriedades privadas para credenciais e conexão com o banco
-    private $servername = "192.168.10.194"; // Endereço do servidor SQL Server
-    private $username = "consulta_pcp";     // Nome de usuário do banco
-    private $password = "hMhkFwLHBpDIp0&N"; // Senha do banco
-    private $dbname = "DADOSADV";           // Nome do banco de dados
+    private $servername = "192.168.10.***"; // Endereço do servidor SQL Server
+    private $username = "consulta";     // Nome de usuário do banco
+    private $password = "******"; // Senha do banco
+    private $dbname = "DADOS***";           // Nome do banco de dados
     private $conn;                          // Variável para armazenar a conexão
 
     // Construtor da classe, inicializa a conexão com o banco
