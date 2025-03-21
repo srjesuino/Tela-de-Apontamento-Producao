@@ -7,6 +7,8 @@ localizada em Lages, SC. A MadeparDoors é uma empresa consolidada na região, e
 A solução permite que operadores registrem suas atividades de forma ágil e eficiente, seja através de totens instalados na fábrica ou dispositivos móveis, 
 garantindo maior controle e rastreabilidade da produção. No caso específico da Madepar, o sistema foi implementado em ambos os cenários, utilizando tablets Multilaser M10 como dispositivos móveis.
 
+Adendo: este projeto hoje faz parte de um projeto um pouco maior, onde ele é uma das soluções encontradas dentro.
+
 ## 🚀 Funcionalidades
 - Leitura de QR Codes para capturar ordem de produção
 - Identificação de operadores via usuários do Protheus
@@ -24,6 +26,7 @@ garantindo maior controle e rastreabilidade da produção. No caso específico d
 - **Outras Ferramentas:** XAMPP, Instascan
 
 ## 🎨 Propósito
+Este projeto hoje faz parte de um projeto maior, onde ele é uma das soluções implementadas dentro de um sistema mais amplo para otimização do ambiente fabril, que tambem esta no meu protifolio.
 Este projeto foi minha primeira experiência no desenvolvimento de uma solução real, que está em produção na MadeparDoors. Foi um marco fundamental para minha evolução profissional, 
 pois me permitiu aprofundar conhecimentos em diversas tecnologias e aprimorar minha capacidade de desenvolver sistemas funcionais e integrados. 
 Além disso, faz parte do meu portfólio, demonstrando minha capacidade de criar soluções eficientes para o ambiente fabril e minha capacidade de resolver problemas de forma independente.
