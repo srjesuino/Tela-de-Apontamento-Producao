@@ -15,7 +15,7 @@ garantindo maior controle e rastreabilidade da produção. No caso específico d
 - Integração com o sistema Protheus via WebService (captura de usuário e registro de apontamento diretamente no sistema).
 - Captura de informações referentes à OP lida com consultas SQL no banco de dados do Protheus ![Tela com os dados capturados pela OP](screenshots/QrCode_Lido.png)
 - Apontamento do lote de produção conforme o recurso que o operador comanda.
-- Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](screenshots/DropDown_Ativo.png)
+- Atualização do DOM com troca de informações entre frontend e backend via AJAX ![DropDown Relativo](ScreenShots/DropDown Ativo.png)
 
 ## 🛠️ Tecnologias Utilizadas
 - **Frontend:** HTML, CSS, JavaScript, Figma
